@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>Polyglots Immigrant Services · Niagara Falls</title>
+<meta content="Polyglots Immigrant Services helps newcomers gain day-to-day skills for a smooth transition to Canadian life. Based in Niagara Falls, ON." name="description"/>
+<meta content="Polyglots Immigrant Services · Niagara Falls" property="og:title"/>
+<meta content="Helping newcomers build their Canadian life, one skill at a time. Settlement support, life skills workshops, volunteer &amp; donate." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Polyglots Immigrant Services" name="twitter:title"/>
+<meta content="Helping newcomers build their Canadian life, one skill at a time." name="twitter:description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&amp;family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #2E6B8A;
+      --secondary: #D4A373;
+      --accent: #E07A5F;
+      --text: #1C1C1C;
+      --bg: #FAF7F2;
+      --muted: #F0EBE3;
+      --heading: 'Merriweather', Georgia, serif;
+      --body: 'Open Sans', system-ui, sans-serif;
+      --shadow: 0 8px 20px rgba(0,0,0,0.04), 0 2px 6px rgba(0,0,0,0.02);
+      --shadow-hover: 0 16px 32px rgba(0,0,0,0.06), 0 4px 12px rgba(0,0,0,0.03);
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--body);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; height: auto; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 1.25rem; }
+
+    
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: rgba(250,247,242,0.85);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(0,0,0,0.04);
+      padding: 0.75rem 0;
+    }
+    .site-header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-identity {
+      font-family: var(--heading);
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--primary);
+      letter-spacing: -0.01em;
+    }
+    .site-identity span { color: var(--accent); }
+
+    
+    .proof-strip {
+      background: var(--muted);
+      padding: 0.6rem 0;
+      font-size: 0.85rem;
+      border-bottom: 1px solid rgba(0,0,0,0.03);
+    }
+    .proof-strip .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.5rem;
+      align-items: center;
+    }
+    .proof-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      color: #3a3a3a;
+    }
+    .proof-item strong { font-weight: 600; color: var(--text); }
+    .proof-link {
+      background: var(--primary);
+      color: white;
+      padding: 0.2rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      transition: background 0.2s;
+    }
+    .proof-link:hover { background: #1f5670; text-decoration: none; }
+
+    
+    .hero {
+      position: relative;
+      min-height: 90vh;
+      display: flex;
+      align-items: flex-end;
+      padding: 2rem 0 3rem;
+      background: var(--muted);
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 30% 40%;
+      filter: saturate(1.05) brightness(0.75);
+      z-index: 0;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(46,107,138,0.25) 0%, rgba(0,0,0,0.1) 70%);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+      background: rgba(250,247,242,0.88);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      padding: 2rem 2.2rem 2.2rem;
+      border-radius: 0 24px 24px 0;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+      margin-left: 0;
+      width: 90%;
+    }
+    .hero-content h1 {
+      font-family: var(--heading);
+      font-weight: 900;
+      font-size: clamp(2rem, 6vw, 3.4rem);
+      line-height: 1.15;
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+    .hero-content h1 span { color: var(--accent); }
+    .hero-content p {
+      font-size: 1.1rem;
+      margin: 1rem 0 1.6rem;
+      color: #2a2a2a;
+      max-width: 550px;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem 1rem;
+    }
+    .btn {
+      display: inline-block;
+      font-family: var(--body);
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 0.7rem 1.6rem;
+      border-radius: 40px;
+      border: none;
+      background: var(--primary);
+      color: white;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+      box-shadow: var(--shadow);
+      text-decoration: none;
+    }
+    .btn:hover { background: #1f5670; text-decoration: none; transform: translateY(-1px); }
+    .btn-outline {
+      background: transparent;
+      border: 1.5px solid var(--primary);
+      color: var(--primary);
+    }
+    .btn-outline:hover { background: var(--primary); color: white; }
+
+    
+    section { padding: 4rem 0; }
+    .section-title {
+      font-family: var(--heading);
+      font-weight: 700;
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.01em;
+      color: var(--text);
+    }
+    .section-sub { font-size: 1rem; color: #3a3a3a; max-width: 640px; margin-bottom: 2rem; }
+
+    
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+    .about-image {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transform: rotate(-1deg);
+      transition: transform 0.3s;
+    }
+    .about-image:hover { transform: rotate(0deg) scale(1.01); }
+    .about-text p { font-size: 1.05rem; margin-bottom: 1rem; }
+
+    
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    .service-card {
+      background: white;
+      border-radius: 20px;
+      padding: 1.8rem 1.5rem;
+      box-shadow: var(--shadow);
+      transition: box-shadow 0.25s, transform 0.2s;
+      border: 1px solid rgba(0,0,0,0.02);
+    }
+    .service-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-3px); }
+    .service-card h3 {
+      font-family: var(--heading);
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary);
+    }
+    .service-card p { font-size: 0.95rem; color: #2e2e2e; }
+
+    
+    .why-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+    .why-point {
+      background: white;
+      padding: 1.8rem 1.2rem;
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+    .why-point .icon {
+      font-size: 2.2rem;
+      margin-bottom: 0.6rem;
+      display: block;
+    }
+    .why-point p { font-size: 0.95rem; }
+
+    
+    .service-area {
+      background: var(--muted);
+      padding: 3rem 0;
+      position: relative;
+      background-image: url('https://images.pexels.com/photos/7979436/pexels-photo-7979436.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+      background-size: cover;
+      background-position: center 30%;
+      background-blend-mode: overlay;
+      background-color: rgba(240,235,227,0.7);
+    }
+    .area-card {
+      background: rgba(250,247,242,0.92);
+      backdrop-filter: blur(4px);
+      padding: 2rem 2.5rem;
+      border-radius: 24px;
+      max-width: 500px;
+      margin: 0 auto;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+    .area-card h2 { font-family: var(--heading); font-size: 1.6rem; margin-bottom: 0.5rem; }
+    .area-card p { font-size: 1rem; }
+
+    
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+    .gallery-grid img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: filter 0.3s;
+    }
+    .gallery-grid img:hover { filter: brightness(0.92); }
+    .gallery-tall { grid-row: span 2; }
+
+    
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    .contact-info p { margin-bottom: 0.6rem; font-size: 1rem; }
+    .contact-info a { font-weight: 600; }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      border: 1px solid #d6d0c8;
+      border-radius: 12px;
+      font-family: var(--body);
+      font-size: 0.95rem;
+      background: white;
+      margin-bottom: 0.8rem;
+    }
+    .contact-form textarea { min-height: 100px; resize: vertical; }
+    .contact-form .btn { width: 100%; }
+
+    
+    .steps {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      margin: 2rem 0;
+    }
+    .step {
+      background: white;
+      padding: 1.5rem 1.2rem;
+      border-radius: 20px;
+      flex: 1 1 180px;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+    .step .num {
+      font-family: var(--heading);
+      font-weight: 700;
+      font-size: 1.8rem;
+      color: var(--accent);
+    }
+
+    
+    .site-footer {
+      background: var(--text);
+      color: #ccc;
+      padding: 2rem 0;
+      font-size: 0.85rem;
+    }
+    .site-footer .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .site-footer a { color: #bbb; }
+    .site-footer a:hover { color: white; }
+    .footer-attrib { text-align: right; }
+
+    
+    @media (max-width: 768px) {
+      .hero-content { width: 100%; border-radius: 0; padding: 1.5rem; }
+      .about-grid { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr; }
+      .why-row { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; }
+      .proof-strip .container { flex-direction: column; align-items: flex-start; }
+      .site-header .container { flex-direction: column; gap: 0.2rem; }
+    }
+    @media (max-width: 480px) {
+      .gallery-grid { grid-template-columns: 1fr; }
+      .gallery-tall { grid-row: span 1; }
+    }
+  </style>
+</head>
+<body>
+<header class="site-header">
+<div class="container">
+<div class="site-identity">Polyglots <span>Immigrant Services</span></div>
+<div style="font-size:0.8rem; color:#555;">Niagara Falls, ON</div>
+</div>
+</header>
+<div class="proof-strip">
+<div class="container">
+<span class="proof-item"><strong>📍</strong> Niagara Falls, ON</span>
+<span class="proof-item"><strong>📂</strong> Immigrant settlement &amp; life skills</span>
+<a class="proof-link" href="https://polyglotsimmigrantservice.com" rel="noopener" target="_blank">🌐 source record</a>
+</div>
+</div>
+<section class="hero" id="about">
+<img alt="Niagara river and city view" class="hero-bg" height="800" loading="eager" src="https://images.pexels.com/photos/26629908/pexels-photo-26629908.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" width="1200"/>
+<div class="hero-overlay"></div>
+<div class="hero-content">
+<h1>Building New Lives <span>in Niagara</span></h1>
+<p>Polyglots Immigrant Services helps newcomers gain day-to-day skills for a smooth transition to Canadian life.</p>
+<div class="hero-actions">
+<a class="btn" href="#about">Read the summary</a>
+<a class="btn btn-outline" href="https://polyglotsimmigrantservice.com" rel="noopener" target="_blank">Check source record</a>
+</div>
+</div>
+</section>
+<section>
+<div class="container">
+<div class="about-grid">
+<div class="about-text">
+<h2 class="section-title">Field notes</h2>
+<p>Polyglots Immigrant Services is a nonprofit based in Niagara Falls, ON, dedicated to assisting immigrants with day-to-day life skills. We help newcomers navigate Canadian systems, build confidence, and connect with their new community.</p>
+<p>Our work is grounded in practical support: from settlement guidance to life skills workshops, volunteer opportunities, and community donations.</p>
+</div>
+<div class="about-image">
+<img alt="Family cooking together in kitchen" height="800" loading="lazy" src="https://images.pexels.com/photos/8507626/pexels-photo-8507626.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" width="1200"/>
+</div>
+</div>
+</div>
+</section>
+<section style="background: var(--muted);">
+<div class="container">
+<h2 class="section-title">Support paths</h2>
+<div class="services-grid">
+<div class="service-card">
+<h3>Settlement Support</h3>
+<p>Guidance on housing, healthcare, and community resources to help you settle in Niagara Falls.</p>
+</div>
+<div class="service-card">
+<h3>Life Skills Workshops</h3>
+<p>Practical sessions on budgeting, transportation, and Canadian customs.</p>
+</div>
+<div class="service-card">
+<h3>Volunteer Opportunities</h3>
+<p>Join our team and give back to the newcomer community.</p>
+</div>
+<div class="service-card">
+<h3>Donate</h3>
+<p>Your contributions help us provide essential services to immigrants.</p>
+</div>
+</div>
+</div>
+</section>
+<section>
+<div class="container">
+<h2 class="section-title">Why we’re here</h2>
+<div class="why-row">
+<div class="why-point">
+<span class="icon">🧭</span>
+<p>Focused on practical, everyday skills for daily life in Canada.</p>
+</div>
+<div class="why-point">
+<span class="icon">🌉</span>
+<p>Located in the heart of Niagara Falls, close to where you live.</p>
+</div>
+<div class="why-point">
+<span class="icon">🤝</span>
+<p>Welcoming environment where your background is valued.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="service-area">
+<div class="area-card">
+<h2>📍 Service area</h2>
+<p>Serving the Niagara Falls, ON area and surrounding communities.</p>
+<p style="margin-top:0.8rem; font-size:0.9rem;">4677 Ontario Ave, Niagara Falls, ON</p>
+</div>
+</section>
+<section>
+<div class="container">
+<h2 class="section-title">Community snapshots</h2>
+</div>
+<div class="gallery-grid">
+<img alt="Children sitting on green field" height="800" loading="lazy" src="https://images.pexels.com/photos/8033798/pexels-photo-8033798.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" width="1200"/>
+<img alt="Man reading a book" class="gallery-tall" height="800" loading="lazy" src="https://images.pexels.com/photos/9572471/pexels-photo-9572471.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" width="1200"/>
+<img alt="Group of smiling people" height="800" loading="lazy" src="https://images.pexels.com/photos/5029775/pexels-photo-5029775.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" width="1200"/>
+<img alt="Family in a town" height="800" loading="lazy" src="https://images.pexels.com/photos/14831659/pexels-photo-14831659.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" width="1200"/>
+</div>
+</section>
+<section style="background: var(--muted);">
+<div class="container">
+<h2 class="section-title">Fast contact &amp; next steps</h2>
+<div class="steps">
+<div class="step"><span class="num">1</span> Reach out via form or phone</div>
+<div class="step"><span class="num">2</span> Tell us about your situation</div>
+<div class="step"><span class="num">3</span> We’ll suggest programs, volunteering, or donation paths</div>
+<div class="step"><span class="num">4</span> Confirm the best next step together</div>
+</div>
+<div class="contact-grid">
+<div class="contact-info">
+<p><strong>Polyglots Immigrant Services</strong><br/>4677 Ontario Ave<br/>Niagara Falls, ON</p>
+<p>📞 <a href="tel:+12892962874">(289) 296-2874</a></p>
+<p>✉️ <a href="mailto:info@polyglotsimmigrantservice.com">info@polyglotsimmigrantservice.com</a></p>
+<p style="margin-top:1rem; font-size:0.9rem;">📁 Program contacts: Settlement, Workshops, Volunteer, Donate</p>
+</div>
+<div>
+<form action="mailto:info@polyglotsimmigrantservice.com" class="contact-form" enctype="text/plain" method="post">
+<input name="name" placeholder="Your name" required="" type="text"/>
+<input name="phone" placeholder="Phone (optional)" type="text"/>
+<textarea name="message" placeholder="How can we help? (programs, donations, volunteering…)" required=""></textarea>
+<button class="btn" type="submit">Send message</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<footer class="site-footer">
+<div class="container">
+<div>
+<p>© <span id="year"></span> Polyglots Immigrant Services · Niagara Falls, ON</p>
+<p><a href="tel:+12892962874">(289) 296-2874</a> · <a href="mailto:info@polyglotsimmigrantservice.com">info@polyglotsimmigrantservice.com</a></p>
+</div>
+<div class="footer-attrib">
+<p>Photos: <a href="https://www.pexels.com/photo/a-view-of-the-city-from-a-hill-overlooking-the-river-26629908/" target="_blank">This And No Internet 25</a>, <a href="https://www.pexels.com/photo/family-cooking-together-in-the-kitchen-8507626/" target="_blank">Kampus Production</a>, <a href="https://www.pexels.com/photo/children-sitting-on-green-field-8033798/" target="_blank">RDNE Stock project</a>, <a href="https://www.pexels.com/photo/a-man-reading-a-book-9572471/" target="_blank">Tima Miroshnichenko</a>, <a href="https://www.pexels.com/photo/group-of-smiling-people-sitting-together-5029775/" target="_blank">Anna Shvets</a>, <a href="https://www.pexels.com/photo/a-family-in-a-town-14831659/" target="_blank">Samuel Peter</a> · Pexels</p>
+<p><a href="https://polyglotsimmigrantservice.com" target="_blank">Source record</a></p>
+</div>
+</div>
+</footer>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
